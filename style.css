@@ -14,7 +14,7 @@ body{
     min-height: 100vh;
     justify-content: space-between;
     align-items: center;
-    padding: 0 6rem;
+    padding: 0 7rem;
 }
 
 .h1{
@@ -28,16 +28,18 @@ body{
     color: hsl(0, 0%, 100%);
     display: flex;
     flex-flow: column nowrap;
+    margin: 1rem 0 0 0;
+    line-height: 1.8;
 }
 
 .bonus{
     color: hsl(0, 0%, 100%);
     background-color: hsl(248, 32%, 49%);
-    width: 400px;
+    width: 500px;
     padding: 1rem;
     margin: 0 0 1rem 0;
     border-radius: 5px;
-    box-shadow: 0 5px 3px 0 hsl(249, 10%, 26%);
+    box-shadow: 0 5px 3px 0 hsla(249, 10%, 26%, 0.5);
 }
 
 .bonus span{
@@ -47,11 +49,12 @@ body{
 form{
     display: flex;
     flex-flow: column nowrap;
-    width: 400px;
+    width: 500px;
     gap: 1rem;
     background-color: hsl(0, 0%, 100%);
-    padding: 1rem;
+    padding: 2rem;
     border-radius: 5px;
+    box-shadow: 0 5px 3px 0 hsla(249, 10%, 26%, 0.5);
 }
 
 input{
@@ -63,16 +66,75 @@ input{
 }
 
 .claim{
-    width: 368px;
+    width: 436px;
     padding: 1rem;
     background-color: hsl(154, 59%, 51%);
     text-align: center;
     border-radius: 5px;
     text-transform: uppercase;
+    box-shadow: 0 3px 3px 0 hsla(249, 10%, 26%, 0.5);
 }
 
 .claim:any-link{
     color: hsl(0, 0%, 100%);
     font-weight: 700;
     text-decoration: none;
+}
+
+.claim:active,
+.claim:hover{
+    background-color: hsla(154, 59%, 51%, 0.705);
+}
+
+form p{
+    font-size: 12px;
+    text-align: center;
+}
+
+form p span{
+    color: hsl(0, 100%, 74%);
+}
+
+@media (min-width:360px){
+    body{
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 2rem 0;
+        gap: 2rem;
+    }
+
+    .h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .p{
+       text-align: center;
+       font-size: 14px;
+    }
+
+    .info{
+        margin-bottom: 2rem;
+    }
+
+    .form{git 
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .bonus{
+        width: 360px;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    form{
+        width: 360px;
+    }
+
+    .claim{
+        width: 296px;
+    }
 }
